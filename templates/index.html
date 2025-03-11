@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>黄叔精选</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.svg') }}" type="image/svg+xml">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.svg') }}" type="image/svg+xml">
     <style>
         /* 基础样式 */
         :root {
@@ -233,6 +235,23 @@
         font-size: 14px;
         font-weight: 500;
         padding: 6px 12px;
+    }
+        
+    /* 页脚样式 */
+    .footer {
+        text-align: center;
+        padding: 30px 0;
+        margin-top: 40px;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .stats-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .blueprint-button {
         border-radius: 6px;
         text-decoration: none;
         transition: all 0.3s ease;
@@ -319,5 +338,12 @@
             }
         </script>
     </div>
+    
+    <!-- 访问量统计 -->
+    <footer class="footer">
+        <div class="stats-container">
+            <a href="https://hits.sh/read.superhuang.me/"><img alt="Hits" src="https://hits.sh/read.superhuang.me.svg"/></a>
+        </div>
+    </footer>
 </body>
 </html>

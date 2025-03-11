@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>黄叔精选</title>
+    <title>黄叔精选 - 苹果风格设计</title>
     <style>
         /* 基础样式 */
         :root {
@@ -216,31 +216,58 @@
             <h1>黄叔精选</h1>
         </header>
         
-        {% for article in articles %}
+        <!-- 文章卡片 1 -->
         <div class="article-card">
-            <h2 class="article-title">{{ article.title }}</h2>
-            <a href="/article/{{ article.id }}" target="_blank" class="original-link">查看原文</a>
+            <h2 class="article-title">万人期待的字节Trae Win+Mac版全量上线，免费无限量使用Claude+直播+共学社群</h2>
+            <a href="#" class="original-link">查看原文</a>
             
-            {% if article.quote %}
             <div class="quote-block">
-                <p class="quote-text">{{ article.quote }}</p>
+                <p class="quote-text">字节Trae全量上线Win/Mac版，免费无限使用Claude大模型，内置Builder模式和多模态开发支持，并提供免费直播教程与社群共学，助力快速打造AI应用。</p>
             </div>
-            {% endif %}
-            
-            {% if article.comment %}
-            <div class="comment-block">
-                <p>{{ article.comment }}</p>
-            </div>
-            {% endif %}
             
             <div class="article-content">
-                <div class="truncated-content" id="content-{{ article.id }}">
-                    {{ article.content }}
+                <div class="truncated-content" id="content-1">
+                    字节跳动旗下AI编程工具Trae全平台上线，Windows版正式推出（官网：https://sourl.co/2DCmmW）。字节跳动旗下AI编程工具Trae全平台上线，Windows版正式推出。这款备受期待的AI编程助手终于迎来全量发布，同时支持Windows和Mac平台，为开发者提供了强大的AI编程支持。Trae集成了Claude大模型，并且完全免费使用，没有额度限制。
+                    
+                    产品特色包括内置Builder模式，支持多种模态的开发需求，能够快速构建各类AI应用。同时，字节还为用户提供了免费的直播教程和学习社群，帮助开发者快速掌握Trae的使用方法和技巧，加速AI应用的开发过程。
+                    
+                    对于希望进入AI开发领域的程序员来说，Trae无疑是一个极具吸引力的工具，它不仅降低了AI开发的门槛，还通过社区支持提供了持续学习的环境。
                 </div>
-                <a href="javascript:void(0)" class="read-more-link" onclick="toggleContent('content-{{ article.id }}')">阅读更多</a>
+                <a href="javascript:void(0)" class="read-more-link" onclick="toggleContent('content-1')">阅读更多</a>
             </div>
         </div>
-        {% endfor %}
+        
+        <!-- 文章卡片 2 -->
+        <div class="article-card">
+            <h2 class="article-title">2024年，出海做得好的AI产品有哪些共识与反共识？</h2>
+            <a href="#" class="original-link">查看原文</a>
+            
+            <div class="quote-block">
+                <p class="quote-text">2024年AI出海成功的关键在于：创始人需要力亲为直面用户、通过快速推出多款垂直产品进行市场验证，优先选择红海市场积累实战经验，而非盲目追求蓝海领域，同时以用户价值而非功能堆砌定义产品，在PMF（产品市场匹配）中实现自然增长。</p>
+            </div>
+            
+            <div class="article-content">
+                <div class="truncated-content" id="content-2">
+                    2024年AI出海核心趋势与策略：
+                    1. 市场共识：
+                    ○ SaaS+AI融合
+                    ○ 垂直领域应用更具竞争力
+                    ○ 用户体验至上
+                    
+                    2. 反共识观点：
+                    ○ 创始人必须直接面对用户
+                    ○ 快速推出多个产品验证市场
+                    ○ 选择红海市场而非蓝海
+                    ○ 用户价值定义产品，而非功能堆砌
+                    
+                    3. 成功案例分析：
+                    ○ 案例一：专注设计师的AI工具
+                    ○ 案例二：针对内容创作者的AI助手
+                    ○ 案例三：面向开发者的代码生成工具
+                </div>
+                <a href="javascript:void(0)" class="read-more-link" onclick="toggleContent('content-2')">阅读更多</a>
+            </div>
+        </div>
         
         <script>
             function toggleContent(id) {

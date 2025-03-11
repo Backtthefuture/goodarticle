@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景圆形 -->
+  <circle cx="60" cy="60" r="55" fill="#F5F5F7" stroke="#FF3B30" stroke-width="2"/>
+  
+  <!-- 书本形状 -->
+  <path d="M35 40 L35 80 L85 80 L85 40 C70 45 50 45 35 40 Z" fill="#FFFFFF" stroke="#FF3B30" stroke-width="2"/>
+  <path d="M35 40 C50 45 70 45 85 40" fill="none" stroke="#FF3B30" stroke-width="2"/>
+  
+  <!-- 书页线条 -->
+  <path d="M45 45 L45 75" stroke="#FF3B30" stroke-width="1" stroke-dasharray="2,2"/>
+  <path d="M60 43 L60 77" stroke="#FF3B30" stroke-width="1" stroke-dasharray="2,2"/>
+  <path d="M75 45 L75 75" stroke="#FF3B30" stroke-width="1" stroke-dasharray="2,2"/>
+  
+  <!-- 中文字符"精选" -->
+  <text x="60" y="65" font-family="'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#1D1D1F" text-anchor="middle">精选</text>
+  
+  <!-- 底部文字 -->
+  <text x="60" y="95" font-family="'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="bold" fill="#FF3B30" text-anchor="middle">黄叔精选</text>
+</svg>

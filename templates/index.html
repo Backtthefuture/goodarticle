@@ -49,6 +49,22 @@
             position: relative;
         }
         
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .site-logo {
+            width: 50px;
+            height: 50px;
+            transition: transform var(--transition-speed);
+        }
+        
+        .site-logo:hover {
+            transform: scale(1.05);
+        }
+        
         .header h1 {
             font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
             font-size: 36px;
@@ -252,7 +268,10 @@
     <div class="container">
         <div class="header-container">
             <header class="header">
-                <h1>黄叔精选</h1>
+                <div class="logo-container">
+                    <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="黄叔精选" class="site-logo">
+                    <h1>黄叔精选</h1>
+                </div>
             </header>
             <a href="https://superhuang.feishu.cn/wiki/CBBPwvgEuicVhFkx0s7cPmhpn4e" target="_blank" class="blueprint-button">AI编程蓝皮书</a>
         </div>

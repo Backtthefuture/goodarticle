@@ -1,8 +1,9 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 from feishu import FeishuAPI
 import json
+import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 feishu_api = FeishuAPI()
 
 def extract_text_from_json(json_data):

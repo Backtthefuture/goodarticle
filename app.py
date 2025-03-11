@@ -59,13 +59,22 @@ def index():
         # 获取创建时间信息（如果有）
         created_time = record.get('created_time', '')
         
+        # 获取原文链接（可能存在不同的字段名）
+        original_url = ''
+        for field_name in ['原链接', '原文链接', '链接', 'URL', 'url']:
+            if fields.get(field_name):
+                url_raw = fields.get(field_name)
+                original_url = extract_text_from_json(url_raw)
+                break
+        
         article = {
             'id': article_id,
             'title': fields.get('标题', ''),
             'quote': quote_text,
             'comment': comment_text,
             'content': content_text,
-            'created_time': created_time
+            'created_time': created_time,
+            'original_url': original_url
         }
         articles.append(article)
     

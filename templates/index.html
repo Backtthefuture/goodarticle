@@ -44,7 +44,7 @@
         
         /* 页头设计 */
         .header {
-            text-align: center;
+            text-align: left;
             padding: 40px 0;
             position: relative;
         }
@@ -55,7 +55,7 @@
             font-weight: 700;
             color: var(--apple-red);
             letter-spacing: -0.5px;
-            margin-bottom: 10px;
+            margin: 0;
             transition: transform var(--transition-speed);
         }
         
@@ -208,13 +208,54 @@
                 font-size: 20px;
             }
         }
+    /* 蓝皮书按钮样式 */
+    .blueprint-button {
+        display: inline-block;
+        background-color: #f2f2f2;
+        color: var(--apple-text-medium);
+        font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 6px 12px;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+    
+    .blueprint-button:hover {
+        background-color: #e5e5e5;
+        color: var(--apple-blue);
+    }
+    
+    /* 页头布局 */
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    /* 响应式调整 */
+    @media (max-width: 768px) {
+        .blueprint-button {
+            font-size: 12px;
+            padding: 4px 8px;
+        }
+    }
     </style>
 </head>
 <body>
     <div class="container">
-        <header class="header">
-            <h1>黄叔精选</h1>
-        </header>
+        <div class="header-container">
+            <header class="header">
+                <h1>黄叔精选</h1>
+            </header>
+            <a href="https://superhuang.feishu.cn/wiki/CBBPwvgEuicVhFkx0s7cPmhpn4e" target="_blank" class="blueprint-button">AI编程蓝皮书</a>
+        </div>
         
         {% for article in articles %}
         <div class="article-card">

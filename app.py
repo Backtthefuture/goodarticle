@@ -56,14 +56,21 @@ def index():
         comment_raw = fields.get('黄叔点评', '')
         comment_text = extract_text_from_json(comment_raw)
         
+        # 获取创建时间信息（如果有）
+        created_time = record.get('created_time', '')
+        
         article = {
             'id': article_id,
             'title': fields.get('标题', ''),
             'quote': quote_text,
             'comment': comment_text,
-            'content': content_text
+            'content': content_text,
+            'created_time': created_time
         }
         articles.append(article)
+    
+    # 将文章列表倒序排列，最新的内容显示在最前面
+    articles.reverse()
     
     return render_template('index.html', articles=articles)
 
